@@ -1,6 +1,6 @@
 # hmah-cat
 
-## ⚡ Blazinly slow ⚡
+### ⚡ Blazinly slow ⚡
 
 Unix cat utility!
 
@@ -24,7 +24,7 @@ cmake --build .
 
 ```shell
 # From the build directory
-ln -sf /path/to/build/directory/hmah /usr/bin/hmah
+ln -sf <build_directory>/bin/hmah /usr/bin/hmah
 ```
 
 ## Usage

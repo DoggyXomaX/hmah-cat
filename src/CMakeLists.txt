@@ -4,6 +4,12 @@ project(lib)
 set(LIB_SOURCES hmahl.c)
 set(SOURCES hmah.c)
 
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
+file(MAKE_DIRECTORY "${CMAKE_BINARY_DIR}/include")
+file(COPY "${CMAKE_SOURCE_DIR}/src/hmahl.h" DESTINATION "${CMAKE_BINARY_DIR}/include")
+
 if(HMAH_DEBUG)
   add_definitions(-DHMAH_DEBUG)
 endif()
@@ -20,6 +26,3 @@ endif()
 
 add_executable(hmah ${SOURCES})
 target_link_libraries(hmah hmahl)
-
-file(MAKE_DIRECTORY "${CMAKE_BINARY_DIR}/include")
-file(COPY "${CMAKE_SOURCE_DIR}/src/hmahl.h" DESTINATION "${CMAKE_BINARY_DIR}/include")
