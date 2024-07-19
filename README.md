@@ -1,6 +1,6 @@
 # hmah-cat
 
-### ⚡ Blazinly slow ⚡
+### ⚡ Blazingly slow ⚡
 
 Unix cat utility!
 
