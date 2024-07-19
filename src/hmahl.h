@@ -4,6 +4,9 @@
 #include <stddef.h>
 #include <stdio.h>
 
+// Adds \n after each file
+#define HMAH_ENDL 0
+
 void bhmah_impl(char* buffer, size_t bufferSize, const char* path1, ...);
 void fhmah_impl(FILE* stream, const char* path1, ...);
 

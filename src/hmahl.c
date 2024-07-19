@@ -69,10 +69,12 @@ void bhmah_impl(char* buffer, const size_t bufferSize, const char* path1, ...) {
     fread(ptr, 1, fileSize, file);
     ptr += fileSize;
 
+#if HMAH_ENDL
     if (ptr + 1 <= endPtr) {
       *ptr = '\n';
       ptr++;
     }
+#endif
   } while(1);
 
   va_end(args);
@@ -101,7 +103,9 @@ void fhmah_impl(FILE* stream, const char* path1, ...) {
 
       const size_t bytes = fread(rBuffer, 1, CHUNK_SIZE, file);
       if (bytes == 0) {
+#if HMAH_ENDL
         fputc('\n', stream);
+#endif
         break;
       }
 
