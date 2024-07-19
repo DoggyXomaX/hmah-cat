@@ -5,6 +5,7 @@ option(HMAH_SHARED "Build as a shared library" ON)
 option(HMAH_STATIC "Build as a static library" OFF)
 option(HMAH_TESTS "Build tests" OFF)
 option(HMAH_DEBUG "Debug hmah lib errors" OFF)
+option(HMAH_ENDL "Add \n after each file" OFF)
 
 add_subdirectory(src)
 

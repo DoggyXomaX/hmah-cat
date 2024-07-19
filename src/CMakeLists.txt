@@ -14,6 +14,10 @@ if(HMAH_DEBUG)
   add_definitions(-DHMAH_DEBUG)
 endif()
 
+if(HMAH_ENDL)
+  add_definitions(-DHMAH_ENDL)
+endif()
+
 if(HMAH_SHARED)
   add_definitions(-DHMAH_SHARED)
   add_library(hmahl SHARED ${LIB_SOURCES})
