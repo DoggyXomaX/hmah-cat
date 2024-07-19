@@ -1,5 +1,5 @@
-#ifndef __LIB_HMAH_H__
-#define __LIB_HMAH_H__
+#ifndef __LIB_HMAHL_H__
+#define __LIB_HMAHL_H__
 
 #include <stddef.h>
 #include <stdio.h>
@@ -11,4 +11,4 @@ void fhmah_impl(FILE* stream, const char* path1, ...);
 #define fhmah(stream, ...) fhmah_impl(stream, __VA_ARGS__, NULL);
 #define hmah(...) fhmah(stdout, __VA_ARGS__)
 
-#endif // __LIB_HMAH_H__
+#endif // __LIB_HMAHL_H__
